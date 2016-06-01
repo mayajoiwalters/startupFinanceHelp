@@ -2,12 +2,23 @@
 <html>
   <body bgcolor="#48D1CC">
   <style>
-    h1{background-color: Green;}
+    h1{background-color: #ffff4d;}
   </style>
   <center>
   <img src = "images/fisklogo.jpeg">
   <p><a href="homePage.html">Home</a></p>
   </center>
   <h1>Finance Input</h1>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+<div ng-app="">
+<p>Input the name of your Startup:</p>
+<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
+<h1>{{name}}</h1>
+
+</div>
+
+</body>
+
 </body>
 </html>
