@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8" />
+    <title>One Time Fees</title>
+</head>
   <body bgcolor="#48D1CC">
   <style>
-    h1{background-color: #ffff4d;}
+    h1{background-color: #ffff4d; font-family: Tw Cen MT;}
   </style>
   <center>
   <img src = "images/fisklogo.jpeg">
   <p><a href="homePage.html">Home</a></p>
   </center>
   <h1>Finance Input</h1>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<body>
-<div ng-app="">
-<p>Input the name of your Startup:</p>
-<p>Name : <input type="text" ng-model="name" placeholder="Enter name here"></p>
-<h1>{{name}}</h1>
-
-</div>
-
+  <p>Ready  to start budgeting?  Use this calculator to create your personalized spending plan. </p>
+<ul>
+  <li>Enter whole dollar amounts (no cents).</li>
+  <li>Do not use commas in values of $1000 or more.</li>
+</ul>
+<form >
+Company Name: <input type="text" name="comp_name" /><br>
+Starting Money: <input type="amount" name="start_money" /><br>
+Emergency Money: <input type="amount" name="emer_money" />
+Company Name: <input type="amount" name="comp_name" />
+</form>
+<h1></h1>
 </body>
 
 </body>
