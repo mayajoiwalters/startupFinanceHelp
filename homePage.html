@@ -3,17 +3,81 @@
   <head>
     <meta charset= "utf-8">
     <title>SampleWebpage</title>
-  </head>
-  <body bgcolor="LightSkyBlue">
   <style>
-    h1{background-color: Black; font-family: Tw Cen MT; color: white; font-size: 20px; }
-    h2{background-color: Teal; font-family: Tw Cen MT; font-size: 20px; }
-    h3{background-color: SpringGreen; font-family: Tw Cen MT;font-size: 20px; }
-    h4{background-color: Gold; font-family: Tw Cen MT;font-size: 20px; }
-  </style>
+    h1{background-color: Green; font-family: Tw Cen MT; font-size: 20px; }
+    h2{background-color: Black; font-family: Tw Cen MT;  color: white;font-size: 20px; }
+    h3{background-color: Green; font-family: Tw Cen MT; font-size: 20px; }
+    h4{background-color: Black; font-family: Tw Cen MT; color: white;font-size: 20px; }
+/*///////DROPDOWN MENU\\\\\\\\\*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Tw Cen MT;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black:;
+}
+
+li.dropdown {
+    display: inline-block;
+    color: black;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+</style>
+</head>
   <center>
   <img src = "images/FinanceStartup.jpg">
   </center>
+<body bgcolor="LightSkyBlue">
+<ul>
+  <li><a class="active" href="homePage.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Helpful Links</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="initialStartupCosts.html">Startup Costs</a>
+      <a href="ongoingMonthlyCosts.html">Monthly Costs</a>
+      <a href="personalBudget.html">Personal Budget</a>
+    </div>
+  </li> 
+  <li><a href="financeInput.html">Calculator</a></li>
+</ul>
+
   <h1><u>About The Company</u>
   <p>The purpose of this company is to help people who are wanting to create a start-up business make sure they are financially stable. The process will involve them entering a series of information and the system will calculate it to determine if the business is going to be financially stable, needs more work, more money is need, etc.</p></h1>
   <h2><u>About The Creator</u>
@@ -22,13 +86,32 @@
   <p>Getting started is EXTREMELY EASY. Check out the links below to help you make sure that you have all the numbers needed to enusre your success in the financial part of your startup. <u>It's as easy as 1, 2, 3!</u> Get started <a href="financeInput.html">here!</a></p></h3> 
 
 <h4><u>Links for Financial Categories</u>
-<p>The following categories will be addressed:</p>
-<ul>
-	<li><a href="initialStartupCosts.html">Initial startup costs</a></li>
-	<li>Saving for an emergency fund</li>
-	<li><a href="ongoingMonthlyCosts.html">Ongoing monthly costs</a></li>
-	<li><a href="personalBudget.html">Startup owner's personal budget</a></li>
-</ul>
+<p>The following categories will be addressed:<br>
+-<a href="initialStartupCosts.html">Initial startup costs</a><br>
+-Saving for an emergency fund<br>
+-<a href="ongoingMonthlyCosts.html">Ongoing monthly costs</a><br>
+-<a href="personalBudget.html">Startup owner's personal budget</a></p>
 </h4>
+<script>
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>

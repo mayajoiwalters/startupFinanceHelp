@@ -1,13 +1,80 @@
 <!DOCTYPE html>
 <html>
-  <body bgcolor="#48D1CC">
+<head>
+<meta charset="utf-8" />
+    <title>Monthly Costs</title>
+
   <style>
-    h1{background-color: Peru;}
+    h1{background-color: Green; color: white;font-family: Tw Cen MT;}
+    /*///////DROPDOWN MENU\\\\\\\\\*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: Black;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: green;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Tw Cen MT;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black:;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
   </style>
+  </head>
   <center>
   <img src = "images/FinanceStartup.jpg">
-  <p><a href="homePage.html">Home</a></p>
   </center>
+<body bgcolor="#48D1CC">
+ <ul>
+  <li><a class="active" href="homePage.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Helpful Links</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="initialStartupCosts.html">Startup Costs</a>
+      <a href="ongoingMonthlyCosts.html">Monthly Costs</a>
+      <a href="personalBudget.html">Personal Budget</a>
+    </div>
+  </li> 
+  <li><a href="financeInput.html">Calculator</a></li>
+</ul>
+
   <h1>Projected Ongoing Monthly Costs</h1>
 <p>After the expenses of starting the business, they will have ongoing, monthly costs to cover. The regular costs will eat away at that revenue, and it may take them months before they see a profit. They must ensure that they can cover all of these costs to be profitable.</p>
 <p>In addition, if you are opening a store, you may need to purchase a property or put a large down payment on a commercial or retail space.</p>
@@ -25,5 +92,26 @@
 <li>Taxes</li>
 </ul>
 </b>
+<script>
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>

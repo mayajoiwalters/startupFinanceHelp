@@ -2,30 +2,112 @@
 <html>
 <head>
 <meta charset="utf-8" />
-    <title>One Time Fees</title>
-</head>
-  <body bgcolor="#48D1CC">
+    <title>Calculator</title>
+
   <style>
-    h1{background-color: #ffff4d; font-family: Tw Cen MT;}
+    h1{background-color: Green; color: white; font-family: Tw Cen MT;}
+    /*///////DROPDOWN MENU\\\\\\\\\*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: Black;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: green;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Tw Cen MT;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black:;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
   </style>
+  </head>
   <center>
-  <img src = "images/fisklogo.jpeg">
-  <p><a href="homePage.html">Home</a></p>
+  <img src = "images/FinanceStartup.jpg">
   </center>
-  <h1>Finance Input</h1>
-  <p>Ready  to start budgeting?  Use this calculator to create your personalized spending plan. </p>
-<ul>
-  <li>Enter whole dollar amounts (no cents).</li>
-  <li>Do not use commas in values of $1000 or more.</li>
+  <body bgcolor="LightSkyBlue">
+   <ul>
+  <li><a class="active" href="homePage.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Helpful Links</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="initialStartupCosts.html">Startup Costs</a>
+      <a href="ongoingMonthlyCosts.html">Monthly Costs</a>
+      <a href="personalBudget.html">Personal Budget</a>
+    </div>
+  </li> 
+  <li><a href="financeInput.html">Calculator</a></li>
 </ul>
+  <h1>Finance Input</h1>
+  <p>Ready  to start budgeting?  Use this calculator to create your personalized spending plan. <br>
+-Enter whole dollar amounts (no cents).<br
+>
+-Do not use commas in values of $1000 or more.</p>
+
 <form >
 Company Name: <input type="text" name="comp_name" /><br>
 Starting Money: <input type="amount" name="start_money" /><br>
 Emergency Money: <input type="amount" name="emer_money" /><br>
 Company Name: <input type="amount" name="comp_name" />
 </form>
-<h1></h1>
-</body>
 
+</body>
+<script>
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>

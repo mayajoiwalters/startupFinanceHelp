@@ -1,22 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <body bgcolor="#48D1CC">
+<head>
+<meta charset="utf-8" />
+    <title>Personal Budget</title>
+
   <style>
-    h1{background-color: LightSteelBlue;}
+    h1{background-color: Green; color: white;font-family: Tw Cen MT;}
+    /*///////DROPDOWN MENU\\\\\\\\\*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: Black;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: green;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Tw Cen MT;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black:;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
   </style>
-  <center>
-  <img src = "images/FinanceStartup.jpg">
-  <p><a href="homePage.html">Home</a></p>
-  </center>
+  </head>
+ <center>  
+   <img src = "images/FinanceStartup.jpg">
+ </center>
+<body bgcolor="#48D1CC">
+
+  <ul>
+  <li><a class="active" href="homePage.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Helpful Links</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="initialStartupCosts.html">Startup Costs</a>
+      <a href="ongoingMonthlyCosts.html">Monthly Costs</a>
+      <a href="personalBudget.html">Personal Budget</a>
+    </div>
+  </li> 
+  <li><a href="financeInput.html">Calculator</a></li>
+</ul>
+
   <h1>Startup Owner's Personal Budget</h1>
 <p>Usually they won't make too much profit in the first few months of operations. Because of that, we'dll need to take into account their personal budget and calculate how much will be needed to survive at least the first six months of business.</p>
-<p>This is very similar to a business budget and can be completed in three steps:</p>
+<p>This is very similar to a business budget and can be completed in three steps:<br>
 <b>
-<ol>
-<li>Track expenses</li>
-<li>Categorize and describe purchases</li>
-<li>Budget by the month</li>
-</ol>
+1.Track expenses<br>
+2.Categorize and describe purchases<br>
+3.Budget by the month</p>
 </b>
+<script>
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
