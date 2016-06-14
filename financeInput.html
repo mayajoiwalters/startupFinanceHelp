@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8" />
     <title>Calculator</title>
 
   <style>
     h1{background-color: Green; color: white; font-family: Tw Cen MT;}
-    form{text-align: right;
-    }
+    h2{background-color: Green; color: white; font-family: Tw Cen MT; size: 20px}
     /*///////DROPDOWN MENU\\\\\\\\\*/
 ul {
     list-style-type: none;
@@ -81,21 +80,70 @@ li.dropdown {
 -Enter whole dollar amounts (no cents).<br
 >
 -Do not use commas in values of $1000 or more.</p>
-
-<form >
-Company Name: <input type="text" name="comp_name" /><br>
-Starting Money: <input type="amount" name="start_money" /><br>
-Emergency Money: <input type="amount" name="emer_money" /><br>
-Remaining Starting Money: <input type="amount" name="rem_money" /><br>
-Land/Building: <input type="amount" name="land" /><br>
-Supplies/Inventory: <input type="amount" name="supp" /><br>
-Machinery & Equipment: <input type="amount" name="machin" /><br>
-Consultants: <input type="amount" name="consult" /><br>
-Furnitures & Fixtures: <input type="amount" name="furnit" /><br>
-Professional Services: <input type="amount" name="prof" /><br>
-Computer Equipment & Software: <input type="amount" name="comp" /><br>
-Leasehold: <input type="amount" name="lease" /><br>
-Misc. Expenses: <input type="amount" name="misc" /><br>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<div ng-app="">
+<p>Enter the startup name in the box:</p>
+<p>Name : <input type="text" ng-model="compname" placeholder="Enter name here"></p>
+<h2>Company: {{compname}} </h2>
+</div>
+<form name="form" id="form" >
+<table class="ltBlue" align="center" cellspacing="0" cellpadding="2" width="576" border="0">
+  <tbody>
+    <tr>
+    <td align="right">Starting Money</td>
+    <td><input maxlength="10" size="7" name="startmon" /></td><td colspan="2"></td>
+  </tr>
+  <tr>
+    <td align="right">Emergency Money</td>
+    <td><input maxlength="10" size="7" name="emermon"  /></td><td colspan="2"></td>
+  </tr>
+  <tr>
+    <td align="right"><b>Available Starting Money</b></td>
+    <td><input maxlength="10" size="7" name="spendable" readonly  /></td>
+    <td colspan="2"></td>
+  </tr><br>
+  <tr>
+    <th align="middle" class="dkBlue" colspan="4"><u><b>Starting/One-Time Expenses</b></u></b> </th>
+  </tr>
+  <tr>
+    <td align="right">Land/Building
+    </td>
+    <td><input size="7" name="rent" /></td>
+    <td align="right">Supplies/Inventory</td>
+    <td><input size="7" name="misc" /></td><input size="7" name="supp" /></td>
+  </tr>
+  <tr>
+    <td align="right">Machinery & Equipment</td>
+    <td><input size="7" name="util" /></td>
+    <td align="right">Consultants</td>
+    <td><input size="7" name="savings" /></td>
+  </tr>
+  <tr>
+    <td align="right">Furniture & Fixtures</td>
+    <td><input size="7" name="bene" /></td>
+    <td align="right">Professional Services</td>
+    <td><input size="7" name="sal" /></td>
+  </tr>
+  <tr>
+    <td align="right">Computer Equipment & Software</td>
+    <td><input size="7" name="loans" /></td>
+    <td align="right">Leasehold</td>
+    <td><input size="7" name="other" /></td>
+  </tr>
+  <tr>
+    <td align="right">Misc. Expenses</td>
+    <td><input size="7" name="misc" /></td>
+    <td align="right">Security Deposits</td>
+    <td><input size="7" name="adver" /></td>
+  </tr>
+  <tr>
+    <td align="right">Business Liscense/Permits</td>
+    <td><input size="7" name="trans" /></td>
+    <td align="right">Other Charges</td>
+    <td><input size="7" name="otax" /></td>
+  </tr>
+  </tbody>
+</table>
 </form>
 
 </body>
