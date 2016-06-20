@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+    <title>Calculator</title>
+
+  <style>
+    h1{background-color: Green; color: white; font-family: Tw Cen MT;}
+    h2{background-color: Green; color: white; font-family: Tw Cen MT; size: 20px}
+    /*///////DROPDOWN MENU\\\\\\\\\*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: Black;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: green;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Tw Cen MT;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: white;
+    color: black:;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+  </style>
+  </head>
+  <center>
+  <img src = "images/FinanceStartup.jpg">
+  </center>
+  <body bgcolor="LightSkyBlue">
+   <ul>
+  <li><a class="active" href="homePage.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn" onclick="myFunction()">Helpful Links</a>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="initialStartupCosts.html">Startup Costs</a>
+      <a href="ongoingMonthlyCosts.html">Monthly Costs</a>
+      <a href="personalBudget.html">Personal Budget</a>
+    </div>
+  </li> 
+  <li><a href="financeInput.html">Calculator</a></li>
+</ul>
+  <h1>Finance Input</h1>
+  <p>Ready  to start budgeting?  Use this calculator to create your personalized spending plan. <br>
+-Enter whole dollar amounts (no cents).<br>
+-Do not use commas in values of $1000 or more.</p>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<div ng-app="">
+<p>Enter the startup name in the box:</p>
+<p>Name : <input type="text" ng-model="compname" placeholder="Enter name here"></p>
+<h2>Company: {{compname}} </h2>
+</div>
+<form name="form" id="form" >
+<table class="ltBlue" align="center" cellspacing="0" cellpadding="2" border="0">
+  <tbody>
+    <td align="middle" class="dkBlue" colspan="4"><u><b>Starting Amounts</b></u></td>
+    <tr>
+    <td align="right">Starting Money</td>
+    <td><input maxlength="10" size="7" name="startmon" /></td><td colspan="2"></td>
+  </tr>
+  <tr>
+    <td align="right">Emergency Money</td>
+    <td><input maxlength="10" size="7" name="emermon"  /></td><td colspan="2"></td>
+  </tr>
+  <tr>
+    <td align="right"><b>Available Starting Money</b></td>
+    <td><input maxlength="10" size="7" name="spendable" readonly  /></td>
+    <td colspan="2"></td>
+  </tr><br>
+  <tr>
+    <th align="middle" class="dkBlue" colspan="4"><u><b>Starting/One-Time Expenses</b></u></th>
+  </tr>
+  <tr>
+    <td align="right">Land/Building
+    </td>
+    <td><input size="7" name="rent" /></td>
+    <td align="right">Supplies/Inventory</td>
+    <td><input size="7" name="supp" /></td>
+  </tr>
+  <tr>
+    <td align="right">Machinery & Equipment</td>
+    <td><input size="7" name="util" /></td>
+    <td align="right">Consultants</td>
+    <td><input size="7" name="savings" /></td>
+  </tr>
+  <tr>
+    <td align="right">Furniture & Fixtures</td>
+    <td><input size="7" name="bene" /></td>
+    <td align="right">Professional Services</td>
+    <td><input size="7" name="sal" /></td>
+  </tr>
+  <tr>
+    <td align="right">Computer Equipment & Software</td>
+    <td><input size="7" name="loans" /></td>
+    <td align="right">Leasehold</td>
+    <td><input size="7" name="other" /></td>
+  </tr>
+  <tr>
+    <td align="right">Misc. Expenses</td>
+    <td><input size="7" name="misc" /></td>
+    <td align="right">Security Deposits</td>
+    <td><input size="7" name="adver" /></td>
+  </tr>
+  <tr>
+    <td align="right">Business Liscense/Permits</td>
+    <td><input size="7" name="trans" /></td>
+    <td align="right">Other Charges</td>
+    <td><input size="7" name="otax" /></td>
+  </tr>
+  </tbody>
+</table>
+</form>
+
+</body>
+<script>
+  /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
