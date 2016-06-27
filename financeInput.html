@@ -88,7 +88,7 @@ li.dropdown {
 <form name="form" id="form" >
 <table class="ltBlue" align="center" cellspacing="0" cellpadding="2" border="0">
   <tbody>
-    <td align="middle" class="dkBlue" colspan="4"><u><b>Starting Amounts</b></u></td>
+    <td align="middle" class="dkBlue" colspan="4"><b><u>Starting Amounts</b></u></td>
     <tr>
     <td align="right">Starting Money</td>
     <td><input maxlength="10" size="7" name="startmon" /></td><td colspan="2"></td>
@@ -106,41 +106,49 @@ li.dropdown {
     <th align="middle" class="dkBlue" colspan="4"><u><b>Starting/One-Time Expenses</b></u></th>
   </tr>
   <tr>
-    <td align="right">Land/Building
-    </td>
-    <td><input size="7" name="rent" /></td>
+    <td align="right">Land/Building</td>
+    <td><input size="7" name="land" /></td>
     <td align="right">Supplies/Inventory</td>
-    <td><input size="7" name="supp" /></td>
+    <td><input size="7" name="inven" /></td>
   </tr>
   <tr>
     <td align="right">Machinery & Equipment</td>
-    <td><input size="7" name="util" /></td>
+    <td><input size="7" name="machin" /></td>
     <td align="right">Consultants</td>
-    <td><input size="7" name="savings" /></td>
+    <td><input size="7" name="consul" /></td>
   </tr>
   <tr>
     <td align="right">Furniture & Fixtures</td>
-    <td><input size="7" name="bene" /></td>
+    <td><input size="7" name="furn" /></td>
     <td align="right">Professional Services</td>
-    <td><input size="7" name="sal" /></td>
+    <td><input size="7" name="prof" /></td>
   </tr>
   <tr>
     <td align="right">Computer Equipment & Software</td>
-    <td><input size="7" name="loans" /></td>
+    <td><input size="7" name="comp" /></td>
     <td align="right">Leasehold</td>
-    <td><input size="7" name="other" /></td>
+    <td><input size="7" name="lease" /></td>
   </tr>
   <tr>
     <td align="right">Misc. Expenses</td>
     <td><input size="7" name="misc" /></td>
     <td align="right">Security Deposits</td>
-    <td><input size="7" name="adver" /></td>
+    <td><input size="7" name="secur" /></td>
   </tr>
   <tr>
     <td align="right">Business Liscense/Permits</td>
-    <td><input size="7" name="trans" /></td>
+    <td><input size="7" name="busi" /></td>
     <td align="right">Other Charges</td>
     <td><input size="7" name="otax" /></td>
+  </tr>
+    <tr>
+    <th align="middle" class="dkBlue" colspan="4"><u><b>Results</b></u></th>
+  </tr>
+  <tr>
+    <td align="right">Available Money</td>
+    <td><input size="7" name="spendable2" /></td>
+    <td align="right"><b>Starting Discretionary Money</b></td>
+    <td><input size="7" name="fin_avail" /></td>
   </tr>
   </tbody>
 </table>
@@ -168,5 +176,6 @@ window.onclick = function(e) {
   }
 }
 </script>
+<a href="financeInputCont.html">Continue</a>
 </body>
 </html>
